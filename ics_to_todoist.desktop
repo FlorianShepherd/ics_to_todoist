@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ICS to ToDoIst
+Comment=Convert ICS files to ToDoIst entries
+Exec=/usr/bin/ics_to_todoist %U
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Office;
+Name[en_US]=ics_to_todoist

@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Running python script ics_to_todoist.py"
+# echo '$0 = ' $0 # python file
+# echo '$1 = ' $1 # ics file
+# echo '$2 = ' $2 # project
+# echo '$3 = ' $3 # priority
+
+if [ "$3" != "" ]; then
+    python /usr/bin/ics_to_todoist.py -i $1 -p $2 -y $3
+elif [ "$2" != "" ]; then
+    python /usr/bin/ics_to_todoist.py -i $1 -p $2
+elif [ "$1" != "" ]; then
+    python /usr/bin/ics_to_todoist.py -i $1
+else
+    echo "Wrong input. Use: python ics_to_todoist.py -i ics_file -p project -y priority"
+fi
